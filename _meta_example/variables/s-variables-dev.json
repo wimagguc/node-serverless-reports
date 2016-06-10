@@ -1,0 +1,14 @@
+{
+  "stage": "dev",
+
+  "EMAIL_SERVICE" : "SendGrid",
+  "EMAIL_SERVICE_USER" : "XXX",
+  "EMAIL_SERVICE_PASS" : "XXX",
+  "EMAIL_FROM" : "from@me.com",
+  "EMAIL_TO" : "to@you.com",
+
+  "DATABASE_HOST" : "XXX",
+  "DATABASE_USER" : "XXX",
+  "DATABASE_PASS" : "XXX",
+  "DATABASE_DB_NAME" : "XXX"
+}

@@ -1,0 +1,32 @@
+{
+  "_npmOperationalInternal": {
+    "host": "packages-13-west.internal.npmjs.com",
+    "tmp": "tmp/node-serverless-reports-0.2.1.tgz_1458892667270_0.7738919164985418"
+  },
+  "author": {
+    "name": "Richard Dancsi"
+  },
+  "bugs": {
+    "url": "https://github.com/wimagguc/node-serverless-reports"
+  },
+  "dependencies": {
+    "serverless-optimizer-plugin": "^2.1.0",
+    "bluebird": "^3.4.0",
+    "nodemailer": "^2.4.2",
+    "handlebars": "^4.0.5",
+    "mysql": "^2.10.2"
+  },
+  "description": "A Serverless - Node.js project to create reports from database queries, and send those reports out in pretty emails",
+  "devDependencies": {},
+  "homepage": "http://www.wimagguc.com/",
+  "license": "MIT",
+  "name": "node-serverless-reports",
+  "optionalDependencies": {},
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wimagguc/node-serverless-reports.git"
+  },
+  "scripts": {},
+  "version": "0.1.0"
+}

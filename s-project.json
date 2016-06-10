@@ -1,0 +1,12 @@
+{
+  "name": "node-serverless-reports",
+  "custom": {},
+  "plugins": [
+    "serverless-optimizer-plugin"
+  ],
+  "version": "0.0.1",
+  "profile": "serverless-v0.5.0",
+  "location": "https://wimagguc@bitbucket.org/wimagguc/node-serverless-reports.git",
+  "author": "Richard Dancsi",
+  "description": "A Serverless - Node.js project to create reports from database queries, and send those reports out in pretty emails"
+}

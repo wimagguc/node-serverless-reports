@@ -1,0 +1,62 @@
+{
+  "name": "email",
+  "runtime": "nodejs",
+  "description": "Sending email reports",
+  "customName": false,
+  "customRole": false,
+  "handler": "email/handler.handler",
+  "timeout": 10,
+  "memorySize": 256,
+  "authorizer": {},
+  "custom": {
+    "optimize": {
+      "exclude": [
+        "aws-sdk"
+      ],
+      "minify": false
+    }
+  },
+  "endpoints": [
+    {
+      "path": "email",
+      "method": "GET",
+      "type": "AWS",
+      "authorizationType": "none",
+      "authorizerFunction": false,
+      "apiKeyRequired": false,
+      "requestParameters": {},
+      "requestTemplates": "$${apiRequestTemplate}",
+      "responses": {
+        "400": {
+          "statusCode": "400"
+        },
+        "default": {
+          "statusCode": "200",
+          "responseParameters": {},
+          "responseModels": {},
+          "responseTemplates": {},
+          "application/json": ""
+        }
+      }
+    }
+  ],
+  "events": [],
+  "environment": {
+    "SERVERLESS_PROJECT": "${project}",
+    "SERVERLESS_STAGE": "${stage}",
+    "SERVERLESS_REGION": "${region}",
+    "EMAIL_SERVICE": "${EMAIL_SERVICE}",
+    "EMAIL_SERVICE_USER": "${EMAIL_SERVICE_USER}",
+    "EMAIL_SERVICE_PASS": "${EMAIL_SERVICE_PASS}",
+    "EMAIL_FROM": "${EMAIL_FROM}",
+    "EMAIL_TO": "${EMAIL_TO}",
+    "DATABASE_HOST": "${DATABASE_HOST}",
+    "DATABASE_USER": "${DATABASE_USER}",
+    "DATABASE_PASS": "${DATABASE_PASS}",
+    "DATABASE_DB_NAME": "${DATABASE_DB_NAME}"
+  },
+  "vpc": {
+    "securityGroupIds": [],
+    "subnetIds": []
+  }
+}
