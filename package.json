@@ -14,7 +14,8 @@
     "bluebird": "^3.4.0",
     "nodemailer": "^2.4.2",
     "handlebars": "^4.0.5",
-    "mysql": "^2.10.2"
+    "mysql": "^2.10.2",
+    "snyk": "^1.189.0"
   },
   "description": "A Serverless - Node.js project to create reports from database queries, and send those reports out in pretty emails",
   "devDependencies": {},
@@ -27,6 +28,10 @@
     "type": "git",
     "url": "git+https://github.com/wimagguc/node-serverless-reports.git"
   },
-  "scripts": {},
-  "version": "0.1.0"
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "version": "0.1.0",
+  "snyk": true
 }
