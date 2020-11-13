@@ -12,7 +12,7 @@
   "dependencies": {
     "serverless-optimizer-plugin": "^2.1.0",
     "bluebird": "^3.4.0",
-    "nodemailer": "^2.4.2",
+    "nodemailer": "^6.4.16",
     "handlebars": "^4.0.5",
     "mysql": "^2.10.2"
   },
