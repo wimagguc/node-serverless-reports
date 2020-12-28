@@ -1,0 +1,29 @@
+service: node-serverless-reports
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+
+functions:
+  email:
+    handler: handler.handler
+
+    events:
+    # Will send a new message every morning at 8:05
+     - schedule: cron(5 8 * * ? *)
+
+    environment:
+      stage: dev
+
+      EMAIL_SERVICE_HOST: ${env:EMAIL_SERVICE_HOST}
+      EMAIL_SERVICE_USER: ${env:EMAIL_SERVICE_USER}
+      EMAIL_SERVICE_PASS: ${env:EMAIL_SERVICE_PASS}
+      EMAIL_SERVICE_PORT: ${env:EMAIL_SERVICE_PORT}
+      EMAIL_FROM: ${env:EMAIL_FROM}
+      EMAIL_TO: ${env:EMAIL_TO}
+
+      DATABASE_HOST: ${env:DATABASE_HOST}
+      DATABASE_USER: ${env:DATABASE_USER}
+      DATABASE_PASS: ${env:DATABASE_PASS}
+      DATABASE_DB_NAME: ${env:DATABASE_DB_NAME}

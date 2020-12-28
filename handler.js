@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /**
  * Serverless Module: Lambda Handler
@@ -8,13 +8,10 @@
  */
 
 // Require Logic
-var lib = require('../lib/');
+const lib = require('./lib/')
 
 // Lambda Handler
-module.exports.handler = function(event, context) {
-
-  lib.sendReports(event, function(error, response) {
-    return context.done(error, response);
-  });
-
-};
+module.exports.handler = async (event, context) => {
+  const { error, success: response } = await lib.sendReports()
+  return context.done(error, response)
+}

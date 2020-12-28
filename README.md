@@ -8,48 +8,37 @@ Using AWS Lambda, you can then schedule this super-lightweight reporting app, to
 
 Make sure you have:
 
-1. The [Serverless Framework](http://www.serverless.com) installed,
+1. The [Serverless Framework](https://www.serverless.com) installed,
 
-2. Node.js v4.0+.
+2. Node.js v12.0+.
 
-3. An Amazon AWS account (as described by the [Serverless Framework](http://www.serverless.com))
+3. An Amazon AWS account (as described by the [Serverless Framework](https://www.serverless.com))
 
 ## Install
 
-1. Install project dependencies via npm:
+1. Install project dependencies:
 
     ```
-    $ npm install
+    $ yarn install
     ```
 
-2. Init the project using Serverless:
+2. Set up all environment variables:
 
-    ```
-    $ serverless project init
-    ```
+    You have to include your database and sendmail provider's details. Look into `serverless.yml` to see which variables you need to set.
 
-3. Edit the config file
-
-    You have to include your database and sendmail provider's details. An example is in `/_meta_example/variables/s-variables-dev.json` (and the config file to edit will be located under the `/_meta/` folder).
-
-4. Deploy the function and the /email endpoint:
-
-    Run the function locally:
-
-    ```
-    $ cd ./restApi/email
-    $ serverless function run
-    ```
+3. Deploy the function and the /email endpoint:
 
     Deploy it to AWS Lambda:
 
     ```
-    $ serverless dash deploy
+    $ sls deploy
     ```
 
-    (Choose both `function - email` and `endpoint - email - GET`.)
+    To remove a deployed Lambda, call:
 
-5. (Optional) On the AWS Lambda console, create an event scheduler for the endpoint
+    ```
+    $ sls remove
+    ```
 
 ## License
 
@@ -61,6 +50,6 @@ And as always, feel free to contribute!
 
 Richard Dancsi
 
-- Blog: [wimagguc.com](http://www.wimagguc.com/)
-- Twitter: [twitter.com/wimagguc](http://twitter.com/wimagguc)
-- Linkedin: [linkedin.com/in/richarddancsi](http://linkedin.com/in/richarddancsi)
+- Blog: [wimagguc.com](https://www.wimagguc.com/)
+- Twitter: [twitter.com/wimagguc](https://twitter.com/wimagguc)
+- Linkedin: [linkedin.com/in/richarddancsi](https://linkedin.com/in/richarddancsi)

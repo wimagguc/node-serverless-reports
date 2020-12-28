@@ -1,4 +1,4 @@
-Copyright (c) 2016 Richard Dancsi
+Copyright (c) 2016-2020 Richard Dancsi
 
 Lincesed under The MIT License (MIT)
 

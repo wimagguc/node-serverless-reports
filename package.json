@@ -10,15 +10,17 @@
     "url": "https://github.com/wimagguc/node-serverless-reports"
   },
   "dependencies": {
-    "serverless-optimizer-plugin": "^2.1.0",
     "bluebird": "^3.4.0",
-    "nodemailer": "^2.4.2",
     "handlebars": "^4.0.5",
-    "mysql": "^2.10.2"
+    "mysql": "^2.10.2",
+    "nodemailer": "^2.4.2"
   },
   "description": "A Serverless - Node.js project to create reports from database queries, and send those reports out in pretty emails",
-  "devDependencies": {},
-  "homepage": "http://www.wimagguc.com/",
+  "devDependencies": {
+    "serverless": "^2.16.1",
+    "serverless-optimizer-plugin": "^2.1.0"
+  },
+  "homepage": "https://www.wimagguc.com/",
   "license": "MIT",
   "name": "node-serverless-reports",
   "optionalDependencies": {},
@@ -28,5 +30,5 @@
     "url": "git+https://github.com/wimagguc/node-serverless-reports.git"
   },
   "scripts": {},
-  "version": "0.1.0"
+  "version": "1.0.0"
 }
